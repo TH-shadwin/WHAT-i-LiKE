@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed, en vrai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow column, a giant "7" anchoring the header, sections as short labelled blocks */
+:root{
+  --bg:#f3f6f4; --surface:#e4ece7; --fg:#101614; --muted:#56635d;
+  --green:#1f7a4d; --blue:#2457a6; --black:#0d0f0e; --line:#cdd8d2;
+  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c110f; --surface:#151d19; --fg:#e8efeb; --muted:#93a39b;
+  --green:#4cc188; --blue:#6b9cf0; --black:#000; --line:#24302a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c110f; --surface:#151d19; --fg:#e8efeb; --muted:#93a39b;
+  --green:#4cc188; --blue:#6b9cf0; --black:#000; --line:#24302a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem}
+.wrap{max-width:680px;margin:0 auto}
+header{position:relative;padding-block:3.5rem 2.5rem;border-bottom:1px solid var(--line);overflow:hidden}
+.seven{position:absolute;right:-.05em;top:-.12em;font:800 clamp(11rem,40vw,17rem)/1 var(--display);color:var(--green);opacity:.16;pointer-events:none;user-select:none}
+.eyebrow{font:600 .75rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+h1{font:800 clamp(2.8rem,10vw,4.4rem)/1 var(--display);margin:.6rem 0 1rem;letter-spacing:-.02em}
+.lede{font-size:1.1rem;color:var(--muted);max-width:30rem;margin:0}
+section{padding-block:2rem;border-bottom:1px solid var(--line)}
+h2{font:700 1.5rem/1.2 var(--display);margin:0 0 .9rem;text-wrap:balance}
+p{margin:0 0 .8rem;max-width:65ch}
+p:last-child{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.9rem}
+.trips{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.trip{background:var(--surface);border-radius:10px;padding:1rem 1.1rem}
+.trip h3{font:700 1.1rem/1.2 var(--display);margin:0 0 .35rem}
+.trip p{font-size:.93rem;color:var(--muted);margin:0}
+.nope{margin-top:1rem;font-size:.93rem;color:var(--muted)}
+.big7{display:flex;gap:1.2rem;align-items:center}
+.big7 b{font:800 4.5rem/1 var(--display);color:var(--green);flex:none}
+.swatches{display:flex;flex-wrap:wrap;gap:1rem}
+.sw{display:flex;align-items:center;gap:.6rem;font-weight:500}
+.sw i{width:2.2rem;height:2.2rem;border-radius:50%;border:1px solid var(--line)}
+.split{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.split>div{min-width:0}
+.tag{display:inline-block;font:600 .7rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:.35rem .55rem;border-radius:4px;margin-bottom:.6rem}
+.tag.ok{background:var(--green);color:var(--bg)}
+.tag.no{border:1px solid var(--muted);color:var(--muted)}
+footer{padding-top:2rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="seven" aria-hidden="true">7</div>
+    <div class="eyebrow">À propos de moi</div>
+    <h1>Ahmed</h1>
+    <p class="lede">Maths, échecs, plein air, et une grosse liste de pays à voir. Voici un peu qui je suis.</p>
+  </header>
+
+  <section>
+    <h2>Les maths, grâce à un prof</h2>
+    <p>Quand j'étais petit, j'avais un prof de maths qui me lançait toujours des défis. Ces défis-là se sont transformés en amour des maths. Aujourd'hui encore, devant un problème, je me lance un défi pour le résoudre. Mais au fond, j'aime les maths tout court.</p>
+  </section>
+
+  <section>
+    <h2>Sports et activités</h2>
+    <p><strong>Échecs</strong> : mon école avait un club, on s'est inscrits à une ligue et j'ai joué un tournoi quand j'étais petit.</p>
+    <p><strong>Surf</strong> : commencé avec l'école, puis pratiqué après. Là, il me faudrait retrouver la mémoire musculaire, j'ai tout oublié.</p>
+    <p><strong>Soccer</strong> : vraiment agréable à jouer.</p>
+    <p><strong>Patinage</strong> : j'ai même acheté des patins ma première année. Je tiens debout et je fais des tours, mais les figures que font les enfants de 5 ans à la patinoire, oublie ça, je vais me péter tous les os.</p>
+    <ul class="chips"><li>Running</li><li>Nature</li><li>Plein air</li><li>Tout ce qui fait sortir</li></ul>
+  </section>
+
+  <section>
+    <h2>Mon chiffre</h2>
+    <div class="big7">
+      <b>7</b>
+      <p>Pour Cristiano Ronaldo. Sa mentalité et sa discipline sont à un autre niveau.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les voyages qui m'appellent</h2>
+    <div class="trips">
+      <div class="trip"><h3>Japon</h3><p>La culture, les ramens, les sushis, l'anime. Un beau pays avec des gens respectueux.</p></div>
+      <div class="trip"><h3>Corée du Sud</h3><p>Pour les dramas coréens, surtout les romances, et toutes les séries que j'ai vues.</p></div>
+      <div class="trip"><h3>Sud du Maroc</h3><p>J'ai vu le nord et le centre pendant toute mon enfance, jamais le sud. Un road trip là-bas avec mes amis, ce serait incroyable.</p></div>
+    </div>
+    <p class="nope">La Chine, par contre, pas trop pour moi, même si j'y ai des amis.</p>
+  </section>
+
+  <section>
+    <div class="split">
+      <div>
+        <span class="tag ok">J'adore</span>
+        <h2>Les desserts</h2>
+        <p>Le pastel de nata, la tartelette portugaise à la crème. Et un bon fondant au chocolat.</p>
+      </div>
+      <div>
+        <span class="tag no">Pas pour moi</span>
+        <h2>La philo</h2>
+        <p>Au lycée, on avait la philosophie en arabe : une phrase au tableau, et « développe ça en 5 pages ». Je suis traumatisé.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mes couleurs</h2>
+    <div class="swatches">
+      <span class="sw"><i style="background:var(--black)"></i>Noir</span>
+      <span class="sw"><i style="background:var(--green)"></i>Vert, pour la nature</span>
+      <span class="sw"><i style="background:var(--blue)"></i>Bleu</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les animaux, et le rêve</h2>
+    <p>Chats, chiens, en vrai tous les animaux sauf les dangereux. C'est vraiment le fun d'être avec eux.</p>
+    <p>Le rêve : une petite maison avec des animaux, un jardin et une piscine. Je pense que ce serait la retraite parfaite pour mon père. On va voir.</p>
+  </section>
+
+  <footer>Ahmed · Trois-Rivières</footer>
+</div>
+</body>
+</html>
